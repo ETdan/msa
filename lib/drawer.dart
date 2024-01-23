@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:vid/history_page.dart';
 import 'package:vid/home_page.dart';
 import 'package:vid/like_page.dart';
-import 'package:vid/profile_page.dart';
+import 'package:vid/search_page.dart';
 import 'package:vid/setings_page.dart';
 
 class MyDrawer extends StatelessWidget {
+  const MyDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -41,14 +43,14 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Profile'),
-            leading: Icon(Icons.person),
+            title: Text('Search'),
+            leading: Icon(Icons.search),
             onTap: () {
               // Handle sidebar item tap (e.g., navigate to profile)
               // Navigator.pop(context); // Close the sidebar
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ProfilePage()),
+                MaterialPageRoute(builder: (context) => SearchPage()),
               );
             },
           ),
