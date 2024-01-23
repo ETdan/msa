@@ -16,12 +16,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        '/webview': (context) => const WebViewPage(
-              initialUrl: "https://vidsrc.to/embed/movie/787699",
-            ),
-        // '/webview2': (context) => WebViewPage(
-        //       initialUrl: "https://vidsrc.to/embed/movie/872585",
-        //     ),
+        '/webview': (context) => const WebViewPage(),
       },
     );
   }

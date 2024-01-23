@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  void _openWebView(BuildContext context, String initialUrl) {
-    Navigator.pushNamed(context, '/webview',
-        arguments: {'initialUrl': initialUrl});
-  }
+  // void _openWebView(BuildContext context, String initialUrl) {
+  //   Navigator.pushNamed(context, '/webview',
+  //       arguments: {'initialUrl': initialUrl});
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // _openWebView(context, "https://vidsrc.to/embed/movie/787699");
-                Navigator.pushNamed(context, '/webview2', arguments: {
+                Navigator.pushNamed(context, '/webview', arguments: {
                   'initialUrl': "https://vidsrc.to/embed/movie/787699"
                 });
               },
