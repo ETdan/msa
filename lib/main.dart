@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vid/home_page.dart';
+import 'package:vid/login_page.dart';
 import 'package:vid/movie_page.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => LoginPage(),
         '/webview': (context) => const WebViewPage(),
       },
     );
