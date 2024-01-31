@@ -27,10 +27,11 @@ class _WebViewPageState extends State<WebViewPage> {
         onPageFinished: (String url) {},
         onWebResourceError: (WebResourceError error) {},
         onNavigationRequest: (NavigationRequest request) {
-          if (request.url.startsWith('https://vidsrc.to/embed/movie/')) {
-            return NavigationDecision.prevent;
+          // if (request.url.startsWith('https://vidsrc.to/embed/movie')) {
+          if (request.url.startsWith('https://vidsrc.to/embed/movie')) {
+            return NavigationDecision.navigate;
           }
-          return NavigationDecision.navigate;
+          return NavigationDecision.prevent;
         },
       ),
     );
@@ -56,6 +57,7 @@ class _WebViewPageState extends State<WebViewPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(initialUrl),
+        // title: const Text("Enjoy"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () async {
